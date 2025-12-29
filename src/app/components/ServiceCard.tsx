@@ -24,7 +24,7 @@ export function ServiceCard({ service }: { service: Service }) {
         <p className="mt-2 text-sm text-neutral-600">{service.blurb}</p>
 
         <ul className="mt-4 space-y-1 text-sm text-neutral-700">
-          {service.highlights.map((b) => (
+          {service.bullets.map((b) => (
             <li key={b} className="flex items-start gap-2">
               <span className="mt-2 inline-block h-1.5 w-1.5 rounded-full bg-neutral-400" />
               <span>{b}</span>
