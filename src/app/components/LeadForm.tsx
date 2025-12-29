@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { leadSchema, type LeadInput } from "../lib/leadSchema";
+import { SERVICE_OPTIONS } from "../lib/services";
 
 function FieldError({ msg }: { msg?: string }) {
   if (!msg) return null;
@@ -73,7 +74,6 @@ export function LeadForm({ onSuccess }: { onSuccess?: () => void }) {
         </div>
       </div>
 
-      {/* anti-bot */}
       <input className="hidden" tabIndex={-1} autoComplete="off" {...register("honey")} />
 
       <div className="grid gap-3 md:grid-cols-2">
@@ -115,14 +115,11 @@ export function LeadForm({ onSuccess }: { onSuccess?: () => void }) {
           className="mt-1 w-full rounded-xl border border-neutral-200 bg-white px-3 py-2 text-sm outline-none ring-neutral-900/10 focus:ring-4"
           {...register("service")}
         >
-          <option>Bathroom Renovations</option>
-          <option>Kitchen Renovations</option>
-          <option>Windows + Doors</option>
-          <option>Siding</option>
-          <option>Roof + Gutters</option>
-          <option>Decks</option>
-          <option>Porches + Sunrooms</option>
-          <option>Other</option>
+          {SERVICE_OPTIONS.map((opt) => (
+            <option key={opt} value={opt}>
+              {opt}
+            </option>
+          ))}
         </select>
         <FieldError msg={errors.service?.message as any} />
       </div>
