@@ -2,18 +2,14 @@ import Link from "next/link";
 import { Section } from "./components/Section";
 import { CTAButton } from "./components/CTAButton";
 import { PlaceholderImage } from "./components/ui/PlaceholderImage";
-import { ServiceCard } from "./components/ServiceCard";
-import { SERVICES } from "./lib/services";
+import { ServicesPicker } from "./components/ServicesPicker";
 
 export default function HomePage() {
   return (
     <div id="home">
-      {/* HERO */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
-          {/* Imagen grande: placeholder */}
           <PlaceholderImage className="h-full w-full rounded-none" label="HERO IMAGE" />
-          {/* overlay */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/35 to-white/0" />
         </div>
 
@@ -62,7 +58,6 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* wave-ish divider */}
           <div className="h-10 bg-gradient-to-b from-white/0 to-white" />
         </div>
       </section>
@@ -72,16 +67,11 @@ export default function HomePage() {
         id="services"
         eyebrow="SERVICES"
         title="Home improvements with a modern finish"
-        subtitle="Keep the classic feel — upgrade the layout, motion, and clarity. Pick a service to see details."
+        subtitle="Pick a service to see details (like the original site), but with a cleaner layout and motion."
       >
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {SERVICES.map((s) => (
-            <ServiceCard key={s.slug} service={s} />
-          ))}
-        </div>
+        <ServicesPicker />
       </Section>
 
-      {/* FEATURE SPLIT */}
       <Section
         eyebrow="WHY US"
         title="Less rigid. More polished. Same trusted essence."
