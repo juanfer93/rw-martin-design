@@ -1,13 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { AnimatePresence } from "framer-motion";
 import { MotionDiv } from "@/app/components/Motion";
 import { PlaceholderImage } from "@/app/components/ui/PlaceholderImage";
 import { CTAButton } from "@/app/components/CTAButton";
 import type { Service } from "@/app/lib/services";
-import { useMemo, useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { useMemo } from "react";
 
 function Card({ title, items }: { title: string; items: string[] }) {
   return (
@@ -25,11 +23,16 @@ function Card({ title, items }: { title: string; items: string[] }) {
   );
 }
 
-export function ServiceDetails({ service, related }: { service: Service; related: Service[] }) {
-  const [openFAQ, setOpenFAQ] = useState<number | null>(0);
-
+export function ServiceDetails({
+  service,
+  related,
+}: {
+  service: Service;
+  related: Service[];
+}) {
   const metaLine = useMemo(
-    () => "Fredericksburg • Spotsylvania • Stafford • Orange County • King George • Prince William • Fairfax • Richmond",
+    () =>
+      "Fredericksburg • Spotsylvania • Stafford • Orange County • King George • Prince William • Fairfax • Richmond",
     []
   );
 
@@ -57,8 +60,11 @@ export function ServiceDetails({ service, related }: { service: Service; related
             {service.title}
           </h1>
 
-          <p className="mt-4 text-base text-neutral-700 md:text-lg">
-            {service.overview}
+          <p className="mt-3 text-neutral-600 md:text-lg">{service.blurb}</p>
+
+          {/* ✅ antes era service.overview */}
+          <p className="mt-5 text-base text-neutral-700 md:text-lg">
+            {service.description}
           </p>
 
           <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -99,7 +105,8 @@ export function ServiceDetails({ service, related }: { service: Service; related
           viewport={{ once: true, margin: "-10%" }}
           transition={{ duration: 0.45 }}
         >
-          <Card title="Highlights" items={service.highlights} />
+          {/* ✅ antes era service.highlights */}
+          <Card title="Highlights" items={service.bullets} />
         </MotionDiv>
 
         <MotionDiv
@@ -108,7 +115,15 @@ export function ServiceDetails({ service, related }: { service: Service; related
           viewport={{ once: true, margin: "-10%" }}
           transition={{ duration: 0.45, delay: 0.05 }}
         >
-          <Card title="What’s included" items={service.included} />
+          <Card
+            title="What’s included"
+            items={[
+              "Design guidance + scope planning",
+              "Material/finish coordination",
+              "Clean job site habits",
+              "Punch list + final walkthrough",
+            ]}
+          />
         </MotionDiv>
 
         <MotionDiv
@@ -117,51 +132,15 @@ export function ServiceDetails({ service, related }: { service: Service; related
           viewport={{ once: true, margin: "-10%" }}
           transition={{ duration: 0.45, delay: 0.1 }}
         >
-          <Card title="Great for" items={service.goodFor} />
+          <Card
+            title="Great for"
+            items={[
+              "Refreshing an outdated space",
+              "Improving function and comfort",
+              "Boosting curb appeal and value",
+            ]}
+          />
         </MotionDiv>
-      </div>
-
-      {/* FAQ */}
-      <div className="mt-12">
-        <div className="text-xs font-semibold tracking-[0.25em] text-neutral-500">FAQ</div>
-        <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
-          Common questions
-        </h2>
-
-        <div className="mt-6 grid gap-3">
-          {service.faqs.map((f, idx) => {
-            const isOpen = openFAQ === idx;
-            return (
-              <div key={f.q} className="rounded-2xl border border-neutral-200 bg-white">
-                <button
-                  onClick={() => setOpenFAQ((v) => (v === idx ? null : idx))}
-                  className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
-                >
-                  <div className="text-sm font-semibold text-neutral-900">{f.q}</div>
-                  <ChevronDown
-                    className={[
-                      "h-5 w-5 text-neutral-500 transition",
-                      isOpen ? "rotate-180" : "rotate-0",
-                    ].join(" ")}
-                  />
-                </button>
-
-                <AnimatePresence initial={false}>
-                  {isOpen && (
-                    <MotionDiv
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      className="overflow-hidden"
-                    >
-                      <div className="px-5 pb-5 text-sm text-neutral-700">{f.a}</div>
-                    </MotionDiv>
-                  )}
-                </AnimatePresence>
-              </div>
-            );
-          })}
-        </div>
       </div>
 
       {/* Related */}
