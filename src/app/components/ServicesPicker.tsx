@@ -115,12 +115,6 @@ export function ServicesPicker() {
                   >
                     Call 540-846-1422
                   </a>
-                  <Link
-                    href={`/services/${selected.slug}`}
-                    className="inline-flex items-center justify-center rounded-full border border-neutral-200 bg-white px-5 py-2.5 text-sm font-semibold text-neutral-900 transition hover:-translate-y-0.5 hover:bg-neutral-50"
-                  >
-                    Full page →
-                  </Link>
                 </div>
               </div>
 
