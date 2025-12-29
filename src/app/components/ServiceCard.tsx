@@ -24,7 +24,7 @@ export function ServiceCard({ service }: { service: Service }) {
         <p className="mt-2 text-sm text-neutral-600">{service.blurb}</p>
 
         <ul className="mt-4 space-y-1 text-sm text-neutral-700">
-          {service.bullets.map((b) => (
+          {service.highlights.map((b) => (
             <li key={b} className="flex items-start gap-2">
               <span className="mt-2 inline-block h-1.5 w-1.5 rounded-full bg-neutral-400" />
               <span>{b}</span>
@@ -36,7 +36,8 @@ export function ServiceCard({ service }: { service: Service }) {
           href={`/services/${service.slug}`}
           className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-neutral-900"
         >
-          Learn more <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
+          Learn more{" "}
+          <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
         </Link>
       </div>
     </MotionDiv>
