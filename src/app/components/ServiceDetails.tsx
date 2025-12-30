@@ -4,7 +4,7 @@ import Link from "next/link";
 import { MotionDiv } from "@/app/components/Motion";
 import { ServiceImage } from "@/app/components/ui/ServiceImage";
 import { CTAButton } from "@/app/components/CTAButton";
-import type { Service } from "@/app/lib/services";
+import type { ServiceItem } from "@/app/lib/services";
 import { useMemo } from "react";
 
 function Card({ title, items }: { title: string; items: string[] }) {
@@ -27,8 +27,8 @@ export function ServiceDetails({
   service,
   related,
 }: {
-  service: Service;
-  related: Service[];
+  service: ServiceItem;
+  related: ServiceItem[];
 }) {
   const metaLine = useMemo(
     () =>
