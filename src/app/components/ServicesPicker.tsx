@@ -6,7 +6,7 @@ import { AnimatePresence } from "framer-motion";
 import { SERVICES } from "../lib/services";
 import { useUIStore } from "../store/ui";
 import { MotionDiv } from "./Motion";
-import { PlaceholderImage } from "./ui/PlaceholderImage";
+import { ServiceImage } from "./ui/ServiceImage";
 import { CTAButton } from "./CTAButton";
 
 export function ServicesPicker() {
@@ -119,10 +119,15 @@ export function ServicesPicker() {
               </div>
 
               <div className="grid gap-4">
-                <PlaceholderImage className="aspect-[4/3]" label="SERVICE IMAGE" />
+                <ServiceImage
+                  className="aspect-[4/3]"
+                  src={selected.images?.hero.src}
+                  alt={selected.images?.hero.alt}
+                  label="SERVICE IMAGE"
+                />
                 <div className="grid grid-cols-2 gap-4">
-                  <PlaceholderImage className="aspect-[4/3]" label="IMAGE" />
-                  <PlaceholderImage className="aspect-[4/3]" label="IMAGE" />
+                  <ServiceImage className="aspect-[4/3]" label="IMAGE" />
+                  <ServiceImage className="aspect-[4/3]" label="IMAGE" />
                 </div>
               </div>
             </div>

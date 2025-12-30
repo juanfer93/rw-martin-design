@@ -1,3 +1,9 @@
+import {
+  BATHROOM_RENOVATIONS_HERO,
+  KITCHEN_RENOVATIONS_HERO,
+  SIDING_REPLACEMENT_HERO,
+} from "./serviceImages";
+
 export type Service = {
   slug: string;
   title: string;
@@ -5,6 +11,12 @@ export type Service = {
   bullets: string[];
 
   description: string;
+  images?: {
+    hero: {
+      src: string;
+      alt: string;
+    };
+  };
 };
 
 export const SERVICES: Service[] = [
@@ -15,6 +27,12 @@ export const SERVICES: Service[] = [
     bullets: ["Tile + waterproofing", "Vanities + lighting", "Walk-in showers"],
     description:
       "Transform your bathroom into a stylish, comfortable, and efficient space. From updated fixtures and tilework to complete bathroom renovations, we handle every detail with care. Whether modern or traditional, we’ll create a bathroom that reflects your taste and improves your daily routine.",
+    images: {
+      hero: {
+        src: BATHROOM_RENOVATIONS_HERO,
+        alt: "Bright bathroom renovation with walk-in shower and built-in vanity",
+      },
+    },
   },
   {
     slug: "kitchen-renovations",
@@ -23,6 +41,12 @@ export const SERVICES: Service[] = [
     bullets: ["Cabinetry + counters", "Layouts + islands", "Backsplashes"],
     description:
       "Breathe new life into the heart of your home with a custom kitchen renovation. We design and remodel kitchens that are both beautiful and functional—tailored to your cooking habits, storage needs, and design preferences. Whether it’s a full gut renovation or a smart refresh, we create kitchens that work for your lifestyle and add lasting value to your home.",
+    images: {
+      hero: {
+        src: KITCHEN_RENOVATIONS_HERO,
+        alt: "Modern kitchen renovation with large island and white cabinetry",
+      },
+    },
   },
   {
     slug: "windows-doors",
@@ -39,6 +63,12 @@ export const SERVICES: Service[] = [
     bullets: ["Colors + styles", "Added protection", "Clean finish details"],
     description:
       "Give your home a fresh new look with durable, low-maintenance siding replacement. We install siding that not only enhances curb appeal but also provides added insulation and protection against the elements. Choose from a variety of colors and styles to match your home’s aesthetic.",
+    images: {
+      hero: {
+        src: SIDING_REPLACEMENT_HERO,
+        alt: "Home exterior with new siding, brickwork, and front porch",
+      },
+    },
   },
   {
     slug: "roof-gutter-replacement",
@@ -101,4 +131,3 @@ export const SERVICE_OPTIONS = [
 ] as const;
 
 export type ServiceOption = (typeof SERVICE_OPTIONS)[number];
-
