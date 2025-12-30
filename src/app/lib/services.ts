@@ -13,11 +13,11 @@ export const SERVICES = [
     bullets: ["Shower & tub conversions", "Tile + waterproofing", "Custom vanities"],
     images: {
       hero: {
-        src: "/window.svg",
+        src: "/services/bathroom.avif",
         alt: "Bathroom renovation concept image",
       },
       card: {
-        src: "/window.svg",
+        src: "/services/bathroom.avif",
         alt: "Bathroom renovation concept image",
       },
     },
@@ -35,11 +35,11 @@ export const SERVICES = [
     ],
     images: {
       hero: {
-        src: "/file.svg",
+        src: "/services/kitchen.avif",
         alt: "Kitchen remodel concept image",
       },
       card: {
-        src: "/file.svg",
+        src: "/services/kitchen.avif",
         alt: "Kitchen remodel concept image",
       },
     },
@@ -53,11 +53,11 @@ export const SERVICES = [
     bullets: ["Drywall + trim", "Flooring options", "Built-in storage"],
     images: {
       hero: {
-        src: "/globe.svg",
+        src: "/services/outdoor-backyard-deck.avif",
         alt: "Basement finishing concept image",
       },
       card: {
-        src: "/globe.svg",
+        src: "/services/outdoor-backyard-deck.avif",
         alt: "Basement finishing concept image",
       },
     },
@@ -71,11 +71,11 @@ export const SERVICES = [
     bullets: ["Deck & patio builds", "Covered porches", "Outdoor lighting"],
     images: {
       hero: {
-        src: "/file.svg",
+        src: "/services/outdoor-covered-patio.avif",
         alt: "Outdoor living concept image",
       },
       card: {
-        src: "/file.svg",
+        src: "/services/outdoor-covered-patio.avif",
         alt: "Outdoor living concept image",
       },
     },
@@ -89,11 +89,11 @@ export const SERVICES = [
     bullets: ["Siding & trim updates", "Entry upgrades", "Paint refresh"],
     images: {
       hero: {
-        src: "/window.svg",
+        src: "/services/exterior-front-home.avif",
         alt: "Exterior refresh concept image",
       },
       card: {
-        src: "/window.svg",
+        src: "/services/exterior-front-home.avif",
         alt: "Exterior refresh concept image",
       },
     },
@@ -107,11 +107,11 @@ export const SERVICES = [
     bullets: ["Built-in shelving", "Accent walls", "Trim & finish work"],
     images: {
       hero: {
-        src: "/globe.svg",
+        src: "/services/outdoor-screened-porch.avif",
         alt: "Custom carpentry concept image",
       },
       card: {
-        src: "/globe.svg",
+        src: "/services/outdoor-screened-porch.avif",
         alt: "Custom carpentry concept image",
       },
     },
