@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { MotionDiv } from "./Motion";
@@ -20,6 +21,17 @@ export function ServiceCard({ service }: { service: Service }) {
       </div>
 
       <div className="relative">
+        {service.images?.card ? (
+          <div className="mb-4 overflow-hidden rounded-xl border border-neutral-200 bg-neutral-100">
+            <Image
+              src={service.images.card.src}
+              alt={service.images.card.alt}
+              width={800}
+              height={520}
+              className="h-40 w-full object-cover transition duration-500 group-hover:scale-105"
+            />
+          </div>
+        ) : null}
         <div className="text-base font-semibold">{service.title}</div>
         <p className="mt-2 text-sm text-neutral-600">{service.blurb}</p>
 
