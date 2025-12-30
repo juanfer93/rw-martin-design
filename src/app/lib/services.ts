@@ -2,7 +2,7 @@ export type ServiceImage = {
   src: string;
   alt: string;
 };
-export type Service = {
+export type ServiceItem = {
   slug: string;
   title: string;
   blurb: string;
@@ -14,7 +14,7 @@ export type Service = {
   };
 };
 
-export const SERVICES: Service[] = [
+export const SERVICES: ServiceItem[] = [
   {
     slug: "bathroom-renovations",
     title: "Bathroom Renovations",

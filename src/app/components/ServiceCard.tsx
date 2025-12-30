@@ -4,9 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { MotionDiv } from "./Motion";
-import type { Service } from "../lib/services";
+import type { ServiceItem } from "../lib/services";
 
-export function ServiceCard({ service }: { service: Service }) {
+export function ServiceCard({ service }: { service: ServiceItem }) {
   return (
     <MotionDiv
       initial={{ y: 10, opacity: 0 }}
