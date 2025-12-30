@@ -121,8 +121,8 @@ export function ServicesPicker() {
               <div className="grid gap-4">
                 <ServiceImage
                   className="aspect-[4/3]"
-                  src={selected.images?.hero.src}
-                  alt={selected.images?.hero.alt}
+                  src={selected.images?.hero?.src}
+                  alt={selected.images?.hero?.alt}
                   label="SERVICE IMAGE"
                 />
                 <div className="grid grid-cols-2 gap-4">

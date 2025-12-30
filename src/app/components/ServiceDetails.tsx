@@ -91,8 +91,8 @@ export function ServiceDetails({
         >
           <ServiceImage
             className="aspect-[4/3]"
-            src={service.images?.hero.src}
-            alt={service.images?.hero.alt}
+            src={service.images?.hero?.src}
+            alt={service.images?.hero?.alt}
             label="SERVICE HERO IMAGE"
           />
           <div className="grid grid-cols-2 gap-4">
