@@ -1,3 +1,11 @@
+import {
+  BATHROOM_RENOVATIONS_HERO,
+  CUSTOM_DECKS_HERO,
+  KITCHEN_RENOVATIONS_HERO,
+  ROOF_GUTTER_REPLACEMENT_HERO,
+  SIDING_REPLACEMENT_HERO,
+} from "./serviceImages";
+
 export type Service = {
   slug: string;
   title: string;
@@ -5,6 +13,12 @@ export type Service = {
   bullets: string[];
 
   description: string;
+  images?: {
+    hero: {
+      src: string;
+      alt: string;
+    };
+  };
 };
 
 export const SERVICES: Service[] = [
@@ -15,6 +29,12 @@ export const SERVICES: Service[] = [
     bullets: ["Tile + waterproofing", "Vanities + lighting", "Walk-in showers"],
     description:
       "Transform your bathroom into a stylish, comfortable, and efficient space. From updated fixtures and tilework to complete bathroom renovations, we handle every detail with care. Whether modern or traditional, we’ll create a bathroom that reflects your taste and improves your daily routine.",
+    images: {
+      hero: {
+        src: BATHROOM_RENOVATIONS_HERO,
+        alt: "Bright bathroom renovation with walk-in shower and built-in vanity",
+      },
+    },
   },
   {
     slug: "kitchen-renovations",
@@ -23,6 +43,12 @@ export const SERVICES: Service[] = [
     bullets: ["Cabinetry + counters", "Layouts + islands", "Backsplashes"],
     description:
       "Breathe new life into the heart of your home with a custom kitchen renovation. We design and remodel kitchens that are both beautiful and functional—tailored to your cooking habits, storage needs, and design preferences. Whether it’s a full gut renovation or a smart refresh, we create kitchens that work for your lifestyle and add lasting value to your home.",
+    images: {
+      hero: {
+        src: KITCHEN_RENOVATIONS_HERO,
+        alt: "Modern kitchen renovation with large island and white cabinetry",
+      },
+    },
   },
   {
     slug: "windows-doors",
@@ -39,6 +65,12 @@ export const SERVICES: Service[] = [
     bullets: ["Colors + styles", "Added protection", "Clean finish details"],
     description:
       "Give your home a fresh new look with durable, low-maintenance siding replacement. We install siding that not only enhances curb appeal but also provides added insulation and protection against the elements. Choose from a variety of colors and styles to match your home’s aesthetic.",
+    images: {
+      hero: {
+        src: SIDING_REPLACEMENT_HERO,
+        alt: "Close-up of clean blue siding with crisp corner trim",
+      },
+    },
   },
   {
     slug: "roof-gutter-replacement",
@@ -47,6 +79,12 @@ export const SERVICES: Service[] = [
     bullets: ["Weather-resistant materials", "Seamless gutters", "Drainage + prevention"],
     description:
       "We provide expert roof replacement using durable, weather-resistant materials to protect your home and enhance curb appeal. Our services also include seamless gutter replacement to ensure proper drainage and prevent water damage. Together, your new roof and gutters will keep your home safe, dry, and looking great for years to come.",
+    images: {
+      hero: {
+        src: ROOF_GUTTER_REPLACEMENT_HERO,
+        alt: "Fresh shingle roofline with gutters against a bright blue sky",
+      },
+    },
   },
   {
     slug: "custom-decks",
@@ -55,6 +93,12 @@ export const SERVICES: Service[] = [
     bullets: ["Wood or composite", "Railings + stairs", "Multi-level builds"],
     description:
       "Create the perfect outdoor retreat with a custom deck built for your lifestyle. Whether you prefer wood or composite materials, our decks are designed for durability, functionality, and beauty. From simple platforms to multi-level builds, we bring your vision to life with expert craftsmanship and attention to detail.",
+    images: {
+      hero: {
+        src: CUSTOM_DECKS_HERO,
+        alt: "Composite deck with white railings overlooking a wooded yard",
+      },
+    },
   },
   {
     slug: "screened-porches-sunrooms",
@@ -101,4 +145,3 @@ export const SERVICE_OPTIONS = [
 ] as const;
 
 export type ServiceOption = (typeof SERVICE_OPTIONS)[number];
-
