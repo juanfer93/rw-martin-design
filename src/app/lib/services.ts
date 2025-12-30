@@ -2,6 +2,7 @@ export type ServiceImage = {
   src: string;
   alt: string;
 };
+
 export const SERVICES = [
   {
     slug: "bathroom-renovations",
@@ -9,11 +10,8 @@ export const SERVICES = [
     blurb: "Modern tile, updated fixtures, and spa-like finishes.",
     description:
       "Upgrade tired bathrooms with smart layouts, clean lines, and finishes that feel fresh without losing practicality.",
-    bullets: [
-      "Shower & tub conversions",
-      "Tile + waterproofing",
-      "Custom vanities",
-    ],
+    bullets: ["Shower & tub conversions", "Tile + waterproofing", "Custom vanities"],
+    images: {
       hero: {
         src: "/window.svg",
         alt: "Bathroom renovation concept image",
@@ -52,11 +50,7 @@ export const SERVICES = [
     blurb: "Comfortable living space with clean, modern details.",
     description:
       "Turn unused square footage into a polished family room, guest suite, or flexible space that feels brand new.",
-    bullets: [
-      "Drywall + trim",
-      "Flooring options",
-      "Built-in storage",
-    ],
+    bullets: ["Drywall + trim", "Flooring options", "Built-in storage"],
     images: {
       hero: {
         src: "/globe.svg",
@@ -74,11 +68,7 @@ export const SERVICES = [
     blurb: "Decks, patios, and covered spaces made for gathering.",
     description:
       "Extend your living space outside with thoughtful layout planning and materials that stand up to the seasons.",
-    bullets: [
-      "Deck & patio builds",
-      "Covered porches",
-      "Outdoor lighting",
-    ],
+    bullets: ["Deck & patio builds", "Covered porches", "Outdoor lighting"],
     images: {
       hero: {
         src: "/file.svg",
@@ -96,18 +86,17 @@ export const SERVICES = [
     blurb: "Curb appeal upgrades with durable finishes.",
     description:
       "Improve first impressions with exterior updates that blend style and function while protecting your investment.",
-    bullets: [
-      "Siding & trim updates",
-      "Entry upgrades",
-      "Paint refresh",
-    ],
+    bullets: ["Siding & trim updates", "Entry upgrades", "Paint refresh"],
     images: {
       hero: {
         src: "/window.svg",
         alt: "Exterior refresh concept image",
       },
+      card: {
         src: "/window.svg",
         alt: "Exterior refresh concept image",
+      },
+    },
   },
   {
     slug: "custom-carpentry",
@@ -115,11 +104,7 @@ export const SERVICES = [
     blurb: "Built-ins, millwork, and details that elevate a room.",
     description:
       "Add tailored storage and architectural detail with custom carpentry that feels seamless and intentional.",
-    bullets: [
-      "Built-in shelving",
-      "Accent walls",
-      "Trim & finish work",
-    ],
+    bullets: ["Built-in shelving", "Accent walls", "Trim & finish work"],
     images: {
       hero: {
         src: "/globe.svg",
