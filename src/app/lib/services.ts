@@ -2,19 +2,7 @@ export type ServiceImage = {
   src: string;
   alt: string;
 };
-export type ServiceItem = {
-  slug: string;
-  title: string;
-  blurb: string;
-  description: string;
-  bullets: string[];
-  images?: {
-    hero: ServiceImage;
-    card?: ServiceImage;
-  };
-};
-
-export const SERVICES: ServiceItem[] = [
+export const SERVICES = [
   {
     slug: "bathroom-renovations",
     title: "Bathroom Renovations",
@@ -26,7 +14,6 @@ export const SERVICES: ServiceItem[] = [
       "Tile + waterproofing",
       "Custom vanities",
     ],
-    images: {
       hero: {
         src: "/window.svg",
         alt: "Bathroom renovation concept image",
@@ -114,6 +101,7 @@ export const SERVICES: ServiceItem[] = [
       "Entry upgrades",
       "Paint refresh",
     ],
+    images: {
       hero: {
         src: "/window.svg",
         alt: "Exterior refresh concept image",
@@ -144,6 +132,8 @@ export const SERVICES: ServiceItem[] = [
     },
   },
 ];
+
+export type ServiceItem = (typeof SERVICES)[number];
 
 export const SERVICE_OPTIONS = SERVICES.map((service) => service.title) as [
   string,
