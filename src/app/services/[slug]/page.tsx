@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { SERVICES } from "@/app/lib/services";
-import { PlaceholderImage } from "@/app/components/ui/PlaceholderImage";
+import { ServiceImage } from "@/app/components/ui/ServiceImage";
 import { CTAButton } from "@/app/components/CTAButton";
 
 export default function ServicePage({ params }: { params: { slug: string } }) {
@@ -49,10 +49,15 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
         </div>
 
         <div className="grid gap-4">
-          <PlaceholderImage className="aspect-[4/3]" label="SERVICE HERO IMAGE" />
+          <ServiceImage
+            className="aspect-[4/3]"
+            src={service.images?.hero.src}
+            alt={service.images?.hero.alt}
+            label="SERVICE HERO IMAGE"
+          />
           <div className="grid grid-cols-2 gap-4">
-            <PlaceholderImage className="aspect-[4/3]" label="IMAGE" />
-            <PlaceholderImage className="aspect-[4/3]" label="IMAGE" />
+            <ServiceImage className="aspect-[4/3]" label="IMAGE" />
+            <ServiceImage className="aspect-[4/3]" label="IMAGE" />
           </div>
         </div>
       </div>

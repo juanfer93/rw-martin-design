@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { MotionDiv } from "@/app/components/Motion";
-import { PlaceholderImage } from "@/app/components/ui/PlaceholderImage";
+import { ServiceImage } from "@/app/components/ui/ServiceImage";
 import { CTAButton } from "@/app/components/CTAButton";
 import type { Service } from "@/app/lib/services";
 import { useMemo } from "react";
@@ -89,10 +89,15 @@ export function ServiceDetails({
           transition={{ duration: 0.55, delay: 0.05 }}
           className="grid gap-4"
         >
-          <PlaceholderImage className="aspect-[4/3]" label="SERVICE HERO IMAGE" />
+          <ServiceImage
+            className="aspect-[4/3]"
+            src={service.images?.hero.src}
+            alt={service.images?.hero.alt}
+            label="SERVICE HERO IMAGE"
+          />
           <div className="grid grid-cols-2 gap-4">
-            <PlaceholderImage className="aspect-[4/3]" label="IMAGE" />
-            <PlaceholderImage className="aspect-[4/3]" label="IMAGE" />
+            <ServiceImage className="aspect-[4/3]" label="IMAGE" />
+            <ServiceImage className="aspect-[4/3]" label="IMAGE" />
           </div>
         </MotionDiv>
       </div>
