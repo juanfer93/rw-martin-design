@@ -16,7 +16,7 @@ export function Footer() {
             <div className="text-sm font-semibold">Quick links</div>
             <div className="mt-2 grid gap-2 text-sm text-neutral-700">
               <Link href="/#services" className="hover:text-neutral-950">Services</Link>
-              <Link href="/#portfolio" className="hover:text-neutral-950">Portfolio</Link>
+              <Link href="/portfolio" className="hover:text-neutral-950">Portfolio</Link>
               <Link href="/#process" className="hover:text-neutral-950">Process</Link>
               <Link href="/#contact" className="hover:text-neutral-950">Contact</Link>
             </div>

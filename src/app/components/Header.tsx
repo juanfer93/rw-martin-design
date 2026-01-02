@@ -11,7 +11,7 @@ import { SERVICES } from "../lib/services";
 const navLinks = [
   { href: "/#home", label: "Home" },
   { href: "/#services", label: "Services" },
-  { href: "/#portfolio", label: "Portfolio" },
+  { href: "/portfolio", label: "Portfolio" },
   { href: "/#process", label: "Process" },
   { href: "/#contact", label: "Contact" },
 ];

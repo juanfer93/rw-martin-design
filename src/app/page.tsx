@@ -32,7 +32,7 @@ export default function HomePage() {
               <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
                 <CTAButton className="w-full sm:w-auto" />
                 <Link
-                  href="#portfolio"
+                  href="/portfolio"
                   className="inline-flex w-full items-center justify-center rounded-full border border-white/30 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/15 sm:w-auto"
                 >
                   View Portfolio
@@ -106,32 +106,6 @@ export default function HomePage() {
               <PlaceholderImage className="aspect-[4/3]" label="FEATURE IMAGE 3" />
             </div>
           </div>
-        </div>
-      </Section>
-
-      {/* PORTFOLIO TEASER */}
-      <Section
-        id="portfolio"
-        eyebrow="PORTFOLIO"
-        title="Recent work (placeholders for your images)"
-        subtitle="Swap these blocks with your real photos later. Layout is ready for a grid gallery."
-      >
-        <div className="grid gap-4 md:grid-cols-3">
-          <PlaceholderImage className="aspect-[4/3]" label="PORTFOLIO 1" />
-          <PlaceholderImage className="aspect-[4/3]" label="PORTFOLIO 2" />
-          <PlaceholderImage className="aspect-[4/3]" label="PORTFOLIO 3" />
-          <PlaceholderImage className="aspect-[4/3]" label="PORTFOLIO 4" />
-          <PlaceholderImage className="aspect-[4/3]" label="PORTFOLIO 5" />
-          <PlaceholderImage className="aspect-[4/3]" label="PORTFOLIO 6" />
-        </div>
-
-        <div className="mt-8">
-          <Link
-            href="/services/bathroom-renovations"
-            className="inline-flex items-center justify-center rounded-full border border-neutral-200 bg-white px-5 py-2.5 text-sm font-semibold text-neutral-900 transition hover:-translate-y-0.5 hover:bg-neutral-50"
-          >
-            Explore a service page
-          </Link>
         </div>
       </Section>
 
