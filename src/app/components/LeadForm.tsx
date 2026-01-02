@@ -48,25 +48,25 @@ export function LeadForm({ onSuccess }: { onSuccess?: () => void }) {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="grid gap-3">
-      <div className="grid gap-3 md:grid-cols-2">
+    <form onSubmit={handleSubmit(onSubmit)} className="grid gap-2.5">
+      <div className="grid gap-2.5 md:grid-cols-2">
         <div>
-          <label className="text-xs font-semibold text-neutral-700">
+          <label className="text-[0.7rem] font-semibold text-neutral-700">
             First Name
           </label>
           <input
-            className="mt-1 w-full rounded-xl border border-neutral-200 bg-white px-3 py-2 text-sm outline-none ring-neutral-900/10 focus:ring-4"
+            className="mt-1 w-full rounded-xl border border-neutral-200 bg-white px-3 py-1.5 text-sm outline-none ring-neutral-900/10 focus:ring-4"
             placeholder="First name"
             {...register("firstName")}
           />
           <FieldError msg={errors.firstName?.message} />
         </div>
         <div>
-          <label className="text-xs font-semibold text-neutral-700">
+          <label className="text-[0.7rem] font-semibold text-neutral-700">
             Last Name
           </label>
           <input
-            className="mt-1 w-full rounded-xl border border-neutral-200 bg-white px-3 py-2 text-sm outline-none ring-neutral-900/10 focus:ring-4"
+            className="mt-1 w-full rounded-xl border border-neutral-200 bg-white px-3 py-1.5 text-sm outline-none ring-neutral-900/10 focus:ring-4"
             placeholder="Last name"
             {...register("lastName")}
           />
@@ -76,20 +76,20 @@ export function LeadForm({ onSuccess }: { onSuccess?: () => void }) {
 
       <input className="hidden" tabIndex={-1} autoComplete="off" {...register("honey")} />
 
-      <div className="grid gap-3 md:grid-cols-2">
+      <div className="grid gap-2.5 md:grid-cols-2">
         <div>
-          <label className="text-xs font-semibold text-neutral-700">Email</label>
+          <label className="text-[0.7rem] font-semibold text-neutral-700">Email</label>
           <input
-            className="mt-1 w-full rounded-xl border border-neutral-200 bg-white px-3 py-2 text-sm outline-none ring-neutral-900/10 focus:ring-4"
+            className="mt-1 w-full rounded-xl border border-neutral-200 bg-white px-3 py-1.5 text-sm outline-none ring-neutral-900/10 focus:ring-4"
             placeholder="you@email.com"
             {...register("email")}
           />
           <FieldError msg={errors.email?.message} />
         </div>
         <div>
-          <label className="text-xs font-semibold text-neutral-700">Phone</label>
+          <label className="text-[0.7rem] font-semibold text-neutral-700">Phone</label>
           <input
-            className="mt-1 w-full rounded-xl border border-neutral-200 bg-white px-3 py-2 text-sm outline-none ring-neutral-900/10 focus:ring-4"
+            className="mt-1 w-full rounded-xl border border-neutral-200 bg-white px-3 py-1.5 text-sm outline-none ring-neutral-900/10 focus:ring-4"
             placeholder="(540) 000-0000"
             {...register("phone")}
           />
@@ -98,9 +98,9 @@ export function LeadForm({ onSuccess }: { onSuccess?: () => void }) {
       </div>
 
       <div>
-        <label className="text-xs font-semibold text-neutral-700">Address</label>
+        <label className="text-[0.7rem] font-semibold text-neutral-700">Address</label>
         <input
-          className="mt-1 w-full rounded-xl border border-neutral-200 bg-white px-3 py-2 text-sm outline-none ring-neutral-900/10 focus:ring-4"
+          className="mt-1 w-full rounded-xl border border-neutral-200 bg-white px-3 py-1.5 text-sm outline-none ring-neutral-900/10 focus:ring-4"
           placeholder="Street, City, State"
           {...register("address")}
         />
@@ -108,11 +108,11 @@ export function LeadForm({ onSuccess }: { onSuccess?: () => void }) {
       </div>
 
       <div>
-        <label className="text-xs font-semibold text-neutral-700">
+        <label className="text-[0.7rem] font-semibold text-neutral-700">
           Service
         </label>
         <select
-          className="mt-1 w-full rounded-xl border border-neutral-200 bg-white px-3 py-2 text-sm outline-none ring-neutral-900/10 focus:ring-4"
+          className="mt-1 w-full rounded-xl border border-neutral-200 bg-white px-3 py-1.5 text-sm outline-none ring-neutral-900/10 focus:ring-4"
           {...register("service")}
         >
           {SERVICE_OPTIONS.map((opt) => (
@@ -125,12 +125,12 @@ export function LeadForm({ onSuccess }: { onSuccess?: () => void }) {
       </div>
 
       <div>
-        <label className="text-xs font-semibold text-neutral-700">
+        <label className="text-[0.7rem] font-semibold text-neutral-700">
           Message (optional)
         </label>
         <textarea
-          rows={4}
-          className="mt-1 w-full rounded-xl border border-neutral-200 bg-white px-3 py-2 text-sm outline-none ring-neutral-900/10 focus:ring-4"
+          rows={3}
+          className="mt-1 w-full rounded-xl border border-neutral-200 bg-white px-3 py-1.5 text-sm outline-none ring-neutral-900/10 focus:ring-4"
           placeholder="Tell us about your project…"
           {...register("message")}
         />
@@ -139,7 +139,7 @@ export function LeadForm({ onSuccess }: { onSuccess?: () => void }) {
 
       <button
         disabled={isSubmitting}
-        className="mt-2 inline-flex items-center justify-center rounded-xl bg-neutral-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-neutral-800 disabled:cursor-not-allowed disabled:opacity-60"
+        className="mt-2 inline-flex items-center justify-center rounded-xl bg-neutral-900 px-4 py-2 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-neutral-800 disabled:cursor-not-allowed disabled:opacity-60"
       >
         {isSubmitting ? "Sending…" : "Request Free Consultation"}
       </button>
