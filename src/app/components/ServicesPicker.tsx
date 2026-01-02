@@ -125,10 +125,6 @@ export function ServicesPicker() {
                   alt={selected.images?.hero.alt}
                   label="SERVICE IMAGE"
                 />
-                <div className="grid grid-cols-2 gap-4">
-                  <ServiceImage className="aspect-[4/3]" label="IMAGE" />
-                  <ServiceImage className="aspect-[4/3]" label="IMAGE" />
-                </div>
               </div>
             </div>
           </MotionDiv>
