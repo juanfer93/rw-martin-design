@@ -28,17 +28,17 @@ export function LeadModal() {
             animate={{ y: 0, opacity: 1, scale: 1 }}
             exit={{ y: 16, opacity: 0, scale: 0.98 }}
             transition={{ type: "spring", stiffness: 260, damping: 22 }}
-            className="mx-auto w-full max-w-xl rounded-3xl bg-white p-4 shadow-xl shadow-black/10 md:p-6"
+            className="mx-auto w-full max-w-lg rounded-3xl bg-white p-4 shadow-xl shadow-black/10 md:p-5"
           >
             <div className="flex items-start justify-between gap-4">
               <div>
-                <div className="text-xs font-semibold tracking-[0.25em] text-neutral-500">
+                <div className="text-[0.65rem] font-semibold tracking-[0.25em] text-neutral-500">
                   FREE CONSULTATION
                 </div>
-                <h3 className="mt-2 text-2xl font-semibold tracking-tight">
+                <h3 className="mt-2 text-xl font-semibold tracking-tight">
                   Tell us about your project
                 </h3>
-                <p className="mt-2 text-sm text-neutral-600">
+                <p className="mt-1.5 text-sm text-neutral-600">
                   We’ll follow up to schedule your consultation and next steps.
                 </p>
               </div>
@@ -52,7 +52,7 @@ export function LeadModal() {
               </button>
             </div>
 
-            <div className="mt-6">
+            <div className="mt-4">
               <LeadForm onSuccess={() => setTimeout(close, 700)} />
             </div>
           </MotionDiv>
