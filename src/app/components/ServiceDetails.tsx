@@ -62,7 +62,6 @@ export function ServiceDetails({
 
           <p className="mt-3 text-neutral-600 md:text-lg">{service.blurb}</p>
 
-          {/* ✅ antes era service.overview */}
           <p className="mt-5 text-base text-neutral-700 md:text-lg">
             {service.description}
           </p>
@@ -82,7 +81,6 @@ export function ServiceDetails({
           </div>
         </MotionDiv>
 
-        {/* Right visuals */}
         <MotionDiv
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
