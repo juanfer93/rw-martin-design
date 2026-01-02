@@ -74,37 +74,42 @@ export default function HomePage() {
 
       <Section
         eyebrow="WHY US"
-        title="Less rigid. More polished. Same trusted essence."
-        subtitle="We keep the straightforward ‘contractor’ clarity, but improve the flow, spacing, and motion so it feels premium."
+        title="Why Choose R.W. Martin Design + Build?"
+        subtitle="Straightforward service, quality workmanship, and a clearer experience at every step."
       >
-        <div className="grid gap-6 lg:grid-cols-2 lg:items-center">
-          <div className="space-y-4">
-            <div className="rounded-2xl border border-neutral-200 bg-white p-5">
-              <div className="text-sm font-semibold">A process that stays clear</div>
-              <p className="mt-2 text-sm text-neutral-600">
-                Simple steps, transparent expectations, and quick check-ins.
-              </p>
-            </div>
-            <div className="rounded-2xl border border-neutral-200 bg-white p-5">
-              <div className="text-sm font-semibold">Better first impression</div>
-              <p className="mt-2 text-sm text-neutral-600">
-                Cleaner hierarchy, softer cards, micro-animations, and modern spacing.
-              </p>
-            </div>
-            <div className="rounded-2xl border border-neutral-200 bg-white p-5">
-              <div className="text-sm font-semibold">Mobile-first conversion</div>
-              <p className="mt-2 text-sm text-neutral-600">
-                CTA stays visible, form feels easy, and the experience feels fast.
-              </p>
+        <div className="space-y-8">
+          <div className="mx-auto max-w-2xl space-y-4 text-center">
+            <p className="text-sm text-neutral-600 md:text-base">
+              Owned and operated by Ron Martin, a licensed Virginia Class A contractor. We
+              specialize in high-quality remodels, exterior renovations, and custom projects.
+              Ron is personally involved in every phase, from the first call to the final
+              walkthrough.
+            </p>
+            <p className="text-sm text-neutral-600 md:text-base">
+              We treat your home like our own, delivering superior craftsmanship, clear
+              communication, and reliable service from start to finish.
+            </p>
+            <div className="flex justify-center">
+              <CTAButton className="rounded-full px-6 py-3" />
             </div>
           </div>
 
-          <div className="grid gap-4">
-            <PlaceholderImage className="aspect-[16/10]" label="FEATURE IMAGE 1" />
-            <div className="grid grid-cols-2 gap-4">
-              <PlaceholderImage className="aspect-[4/3]" label="FEATURE IMAGE 2" />
-              <PlaceholderImage className="aspect-[4/3]" label="FEATURE IMAGE 3" />
-            </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            {[
+              ["🛠️ 40+ Years of experience", "A legacy of hands-on building and happy homeowners."],
+              ["✅ Licensed + insured", "Virginia Class A contractor, qualified for your remodel."],
+              ["✨ Detail-oriented + clean", "We protect your property and keep the job site spotless."],
+            ].map(([title, description]) => (
+              <div
+                key={title}
+                className="rounded-2xl border border-neutral-200 bg-white p-6 text-center shadow-sm shadow-neutral-900/5"
+              >
+                <div className="text-sm font-semibold text-neutral-900 md:text-base">
+                  {title}
+                </div>
+                <p className="mt-2 text-sm text-neutral-600">{description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </Section>
