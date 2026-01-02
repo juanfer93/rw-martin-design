@@ -28,7 +28,7 @@ export function LeadModal() {
             animate={{ y: 0, opacity: 1, scale: 1 }}
             exit={{ y: 16, opacity: 0, scale: 0.98 }}
             transition={{ type: "spring", stiffness: 260, damping: 22 }}
-            className="mx-auto w-full max-w-2xl rounded-3xl bg-white p-5 shadow-xl shadow-black/10 md:p-7"
+            className="mx-auto w-full max-w-xl rounded-3xl bg-white p-4 shadow-xl shadow-black/10 md:p-6"
           >
             <div className="flex items-start justify-between gap-4">
               <div>
