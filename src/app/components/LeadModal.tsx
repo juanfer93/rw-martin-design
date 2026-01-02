@@ -17,7 +17,7 @@ export function LeadModal() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-[60] bg-black/40 backdrop-blur-sm"
+          className="fixed inset-0 z-[60] flex items-start justify-center overflow-y-auto bg-black/40 px-4 py-10 backdrop-blur-sm sm:items-center md:py-12"
           onMouseDown={(e) => {
             // close only if clicking the overlay
             if (e.target === e.currentTarget) close();
@@ -28,7 +28,7 @@ export function LeadModal() {
             animate={{ y: 0, opacity: 1, scale: 1 }}
             exit={{ y: 16, opacity: 0, scale: 0.98 }}
             transition={{ type: "spring", stiffness: 260, damping: 22 }}
-            className="mx-auto mt-10 w-[92%] max-w-2xl rounded-3xl bg-white p-5 shadow-xl shadow-black/10 md:mt-16 md:p-7"
+            className="mx-auto w-full max-w-2xl rounded-3xl bg-white p-5 shadow-xl shadow-black/10 md:p-7"
           >
             <div className="flex items-start justify-between gap-4">
               <div>
