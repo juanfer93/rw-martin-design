@@ -4,8 +4,13 @@ import { SERVICES } from "@/app/lib/services";
 import { ServiceImage } from "@/app/components/ui/ServiceImage";
 import { CTAButton } from "@/app/components/CTAButton";
 
-export default function ServicePage({ params }: { params: { slug: string } }) {
-  const service = SERVICES.find((s) => s.slug === params.slug);
+export default async function ServicePage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const service = SERVICES.find((s) => s.slug === slug);
   if (!service) return notFound();
 
   return (
@@ -55,10 +60,6 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
             alt={service.images?.hero.alt}
             label="SERVICE HERO IMAGE"
           />
-          <div className="grid grid-cols-2 gap-4">
-            <ServiceImage className="aspect-[4/3]" label="IMAGE" />
-            <ServiceImage className="aspect-[4/3]" label="IMAGE" />
-          </div>
         </div>
       </div>
     </div>
