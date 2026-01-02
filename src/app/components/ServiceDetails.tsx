@@ -7,7 +7,7 @@ import { CTAButton } from "@/app/components/CTAButton";
 import type { ServiceItem } from "@/app/lib/services";
 import { useMemo } from "react";
 
-function Card({ title, items }: { title: string; items: string[] }) {
+function Card({ title, items }: { title: string; items: readonly  string[] }) {
   return (
     <div className="rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm shadow-neutral-900/5">
       <div className="text-sm font-semibold">{title}</div>
@@ -102,7 +102,6 @@ export function ServiceDetails({
         </MotionDiv>
       </div>
 
-      {/* Middle content */}
       <div className="mt-12 grid gap-6 lg:grid-cols-3">
         <MotionDiv
           initial={{ opacity: 0, y: 10 }}
@@ -110,7 +109,6 @@ export function ServiceDetails({
           viewport={{ once: true, margin: "-10%" }}
           transition={{ duration: 0.45 }}
         >
-          {/* ✅ antes era service.highlights */}
           <Card title="Highlights" items={service.bullets} />
         </MotionDiv>
 
@@ -174,7 +172,6 @@ export function ServiceDetails({
         </div>
       </div>
 
-      {/* Bottom CTA */}
       <div className="mt-14 rounded-3xl border border-neutral-200 bg-neutral-50 p-6 md:p-8">
         <div className="grid gap-6 md:grid-cols-[1fr_auto] md:items-center">
           <div>
